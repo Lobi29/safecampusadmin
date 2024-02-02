@@ -1,0 +1,67 @@
+.navitems {
+    border: 1px solid #ccc;
+    padding: .75rem 1.5rem;
+    border-radius: 2rem;
+    box-shadow: 0 1px 2px 0 #ccc;
+    transition: 2s;
+    cursor: pointer;
+}
+
+.navBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+}
+
+.item1 {
+    padding: 0 1rem 0 0;
+}
+
+.item2 {
+    padding: 0 1rem;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+
+.dropdown {
+    position: absolute;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    width: 100%;
+    background: white;
+    overflow: hidden;
+    right: 0;
+    top: 40px;
+
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.forStudents {
+    width: 33%;
+}
+
+.forSecurity {
+    width: 33%;
+}
+
+.forAdmin {
+    width: 34%;
+}
+
+.dropdownHeading {
+    font-size: var(--normal-font-size);
+    font-weight: bolder;
+    background-color: #38A3A5;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.item3 {
+    padding: 0 0 0 1rem;
+}
