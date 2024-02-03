@@ -13,7 +13,7 @@
 
 .vendorStats {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 2rem;
     align-items: center;
 }
@@ -122,17 +122,22 @@
 
 }
 
-.state {
+.id {
     grid-row-start: 1;
     grid-column: 3 / span 4;
 }
 
-.about {
+.hostel {
     grid-row-start: 1;
-    grid-column: 5 / span 8;
+    grid-column: 5 / span 6;
 }
 
-.capacity {
+.date {
+    grid-row-start: 1;
+    grid-column: 7 / span 8;
+}
+
+.time {
     grid-row-start: 1;
     grid-column: 9 / span 10;
 }
@@ -145,6 +150,7 @@
 .tableContent {
     width: 100%;
     box-sizing: border-box;
+    margin: 1rem 0;
     padding: 0 1rem;
     display: grid;
     grid-template-columns: repeat(12, 1fr);

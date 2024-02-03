@@ -5,8 +5,6 @@ import List from '../List/List';
 // styles
 import classes from './Dashboard.module.css';
 
-
-
 const Dashboard = () => {
   const MissingHeading = "Missing Students From Each Hostels"
   const MissingData = {
@@ -64,24 +62,32 @@ const Dashboard = () => {
     ],
   };
 
-  const MissingStudentsHeading = "Complain From Student List : ";
+  const MissingStudentsHeading = "Students Missing From Campus : ";
   const MissingStudentsData = [
     {
       name: "Robin Chayegia",
       id: "2112004",
-      hostel: "H6",
+      Category: "H6",
       date: "01/01/0001",
-      exitTime: "4:00 P.M.",
-    },
-    {
-      name: "Laditya Gogoi",
-      id: "2112999",
-      hostel: "H7",
-      date: "01/01/0001",
-      exitTime: "4:00 P.M.",
+      time: "4:00 P.M.",
+      status: "active",
     },
   ];
   const Hostels = ["H9", "H8", "H7", "H6"];
+
+  const ComplainHeading = "Students Missing From Campus : ";
+  const ComplainData = [
+    {
+      name: "Laditya Gogoi",
+      id: "2112999",
+      Category: "Theft",
+      date: "01/01/0001",
+      time: "4:00 P.M.",
+      status: "active",
+    },
+  ];
+  const Issue = ["theft", "harrashment", "violence"];
+
   return (
     <div className={classes.dashboard}>
       <h1 className={classes.heading}>Admin Dashboard</h1>
@@ -167,7 +173,8 @@ const Dashboard = () => {
           </div>
         </div>
         <div className={classes.bottomContainer}>
-          <List heading={MissingStudentsHeading} data={MissingStudentsData} category={Hostels} />
+          <List heading={MissingStudentsHeading} data={MissingStudentsData} options={Hostels} />
+          <List heading={ComplainHeading} data={ComplainData} options={Issue} />
         </div>
       </div>
     </div>

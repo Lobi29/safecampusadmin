@@ -5,13 +5,9 @@ import { BiUpArrowAlt } from 'react-icons/bi';
 // styles
 import classes from './List.module.css';
 
-const List = ({ heading, data, category }) => {
+const List = ({ heading, data, options }) => {
 
-    const [selectedOption, setSelectedOption] = useState("Assam");
-
-
-
-
+    const [selectedOption, setSelectedOption] = useState("");
 
 
     return (
@@ -26,7 +22,7 @@ const List = ({ heading, data, category }) => {
                     </div>
                     <div className={classes.box2}>
                         <BiUpArrowAlt />
-                        <p className={classes.percentage}>60%</p>
+                        <p className={classes.percentage}>60% than yesterday</p>
                     </div>
                 </div>
             </div>
@@ -35,9 +31,10 @@ const List = ({ heading, data, category }) => {
                 <p>Search By Category : </p>
                 <div>
                     <select className={classes.selectForm} value={selectedOption} onChange={(event) => setSelectedOption(event.target.value)}>
-                        {category.map(option => {
+                        {/* Map over the options array to generate <option> elements */}
+                        {options.map(option => (
                             <option key={option} value={option}>{option}</option>
-                        })}
+                        ))}
                     </select>
                 </div>
             </div>
@@ -48,20 +45,22 @@ const List = ({ heading, data, category }) => {
                 <div className={classes.tableHeading}>
                     <p className={classes.name}> Name</p>
                     <p className={classes.id}>Scholar ID</p>
-                    <p className={classes.hoste}>Hostel</p>
+                    <p className={classes.hostel}>Category</p>
                     <p className={classes.date}>Date</p>
-                    <p className={classes.exitTime}>Exit Time</p>
+                    <p className={classes.time}>Exit Time</p>
+                    <p className={classes.status}>Status</p>
                 </div>
 
                 {data.map((data, index) => {
-                    if (data.state === selectedOption) {
+                    if (data.Category === selectedOption) {
                         return (
                             <div key={index} className={classes.tableContent}>
                                 <p className={classes.name}>{data.name}</p>
                                 <p className={classes.id}>{data.id}</p>
                                 <p className={classes.hostel}>{data.hostel}</p>
                                 <p className={classes.date}>{data.date}</p>
-                                <p className={classes.exitTime}>{data.exitTime}</p>
+                                <p className={classes.time}>{data.time}</p>
+                                <p className={classes.status}>{data.status}</p>
                             </div>
                         )
                     }
@@ -69,7 +68,7 @@ const List = ({ heading, data, category }) => {
             </div>
 
 
-        </div>
+        </div >
     )
 }
 
