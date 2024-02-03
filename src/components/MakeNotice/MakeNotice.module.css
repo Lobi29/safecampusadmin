@@ -1,0 +1,125 @@
+.topbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+    gap: 1rem;
+    border-bottom: 1px solid #F2F2F2;
+}
+
+.name {
+    font-size: var(--h1-font-size);
+    font-weight: bolder;
+}
+
+.login {
+    /* background-color: #A1EEBD; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+
+.top {
+    height: 40%;
+}
+
+.bottom {
+    height: 50%;
+}
+
+.heading {
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-semi-bold);
+    text-align: center;
+}
+
+.subHeading {
+    font-size: var(--normal-font-size);
+    color: red;
+    padding: 1rem;
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+
+}
+
+.inputBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    border-bottom: 2px solid #F0F0F0;
+}
+
+.icon {
+    font-size: var(--h2-font-size);
+    color: var(--text-color-light);
+}
+
+
+.selectBox {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    border-bottom: 2px solid #F0F0F0;
+}
+
+.form__select {
+    box-sizing: border-box;
+    border: none;
+    background-color: white;
+    height: 3rem;
+    font-family: var(--body-font);
+    padding: 0 1rem;
+}
+
+.inputBox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    border-bottom: 2px solid #F0F0F0;
+}
+
+.icon {
+    font-size: var(--h2-font-size);
+    color: var(--text-color-light);
+}
+
+.inputField {
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    width: 100%;
+    padding: 0 1rem;
+    font-size: var(--small-font-size);
+    font-family: var(--body-font);
+}
+
+.buttonSubmit {
+    box-sizing: border-box;
+    height: 3rem;
+    width: 300px;
+    padding: 0 1rem;
+    border: none;
+    border-radius: 10px;
+
+    background-color: #00A9FF;
+    color: #fff;
+
+    font-size: var(--normal-font-size);
+    font-family: var(--body-font);
+}
